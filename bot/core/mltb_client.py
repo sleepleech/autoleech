@@ -1,9 +1,6 @@
 import os
 from pyrogram import Client, idle
 
-# ⬅️ INI WAJIB AGAR HANDLER KELOAD
-import bot.handlers
-
 class TgClient:
     bot = Client(
         "bot",
@@ -16,8 +13,10 @@ class TgClient:
     @classmethod
     async def start_bot(cls):
         print("[1] Mulai start_bot()...")
-        await cls.bot.start()  # ⬅️ Harus dipanggil setelah import handler
+        await cls.bot.start()
         print("[2] Bot sudah start()")
+        # ⬇️ Import handler setelah bot start untuk hindari circular import
+        import bot.handlers
         me = await cls.bot.get_me()
         print(f"[3] Bot aktif sebagai @{me.username}")
         print("[4] Masuk idle mode...")
