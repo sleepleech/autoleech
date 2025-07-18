@@ -1,7 +1,8 @@
 import os
-import asyncio
-from pyrogram import Client
-from pyrogram import Client, idle  # idle harus diimpor dari sini!
+from pyrogram import Client, idle
+
+# ⬅️ INI WAJIB AGAR HANDLER KELOAD
+import bot.handlers
 
 class TgClient:
     bot = Client(
@@ -15,7 +16,7 @@ class TgClient:
     @classmethod
     async def start_bot(cls):
         print("[1] Mulai start_bot()...")
-        await cls.bot.start()
+        await cls.bot.start()  # ⬅️ Harus dipanggil setelah import handler
         print("[2] Bot sudah start()")
         me = await cls.bot.get_me()
         print(f"[3] Bot aktif sebagai @{me.username}")
