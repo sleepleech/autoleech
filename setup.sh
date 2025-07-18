@@ -1,11 +1,20 @@
 #!/bin/bash
 
 clear
-echo "Installing Python requirements..."
-pip install -r requirements.txt
+echo "🧠 Sleepy Auto LeechBot Setup 🧠"
+echo "Updating system..."
 
-echo "Setting up environment file..."
-cp .env.example .env
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y python3-pip git unzip curl
 
-echo "Bot setup complete! Run the bot using:"
-echo "python3 -m bot"
+echo "📥 Cloning repository..."
+git clone https://github.com/sleepleech/autoleech.git mirror_leech_autobot
+cd mirror_leech_autobot || exit
+
+echo "📦 Installing Python requirements..."
+pip3 install -r requirements.txt
+
+echo "✅ Setup selesai!"
+echo ""
+echo "🔧 Untuk menjalankan bot, gunakan:"
+echo "  python3 -m bot"
