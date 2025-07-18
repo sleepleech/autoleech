@@ -1,8 +1,7 @@
 import os
-from pyrogram import Client, idle
-from dotenv import load_dotenv  # Tambahkan baris ini
-
-load_dotenv()  # Tambahkan baris ini
+import asyncio
+from pyrogram import Client
+from pyrogram.idle import idle
 
 class TgClient:
     bot = Client(
@@ -15,8 +14,11 @@ class TgClient:
 
     @classmethod
     async def start_bot(cls):
-        print("Menyalakan Sleepy-LeechBot...")
+        print("[1] Mulai start_bot()...")
         await cls.bot.start()
+        print("[2] Bot sudah start()")
         me = await cls.bot.get_me()
-        print(f"Bot aktif sebagai @{me.username}")
+        print(f"[3] Bot aktif sebagai @{me.username}")
+        print("[4] Masuk idle mode...")
         await idle()
+        print("[5] Idle selesai, keluar.")
