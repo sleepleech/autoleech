@@ -1,5 +1,8 @@
 import os
 from pyrogram import Client
+from dotenv import load_dotenv  # Tambahkan baris ini
+
+load_dotenv()  # Tambahkan baris ini
 
 class TgClient:
     bot = Client(
