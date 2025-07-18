@@ -1,15 +1,13 @@
-# Auto-LeechBot
+# 🧠 Auto-LeechBot by Sleepy
 
-Bot Telegram serba bisa untuk mirror/leech file dari berbagai sumber (Google Drive, direct URL, torrent) dan mengirimkannya ke Telegram.
+Bot Telegram serba bisa untuk Mirror & Leech ke Google Drive.
 
-## Fitur
-- Upload dari direct link, drive, magnet, torrent
-- Hasil dalam bentuk file / video
-- Multi akun
-- Support TeamDrive
-- Anti limit
-- dan lainnya...
+### 🔧 Fitur Utama
+- Upload ke Google Drive
+- Download via Direct URL / Telegram file
+- Command sederhana: /status, /cancel, /restart
+- Simple & ringan dijalankan di VPS
 
-## Instalasi Otomatis
+### 🚀 Instalasi
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/USERNAME/REPO/main/setup.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/sleepleech/autoleech/main/setup.sh)
