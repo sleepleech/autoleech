@@ -1,7 +1,7 @@
 import os
 import asyncio
 from pyrogram import Client
-from pyrogram.idle import idle
+from pyrogram import Client, idle  # idle harus diimpor dari sini!
 
 class TgClient:
     bot = Client(
