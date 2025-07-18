@@ -6,5 +6,5 @@ async def main():
         TgClient.start_bot()
     )
 
-if _name_ == "__main__":
+if __name__ == "__main__":
     asyncio.run(main())
